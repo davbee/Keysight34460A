@@ -32,6 +32,7 @@ class Widget(QWidget, Ui_Widget):
         self.btrSpinBox.valueChanged.connect(self.bsb)
         self.chunk_size = self.btrSpinBox.value()  # byte to read spinbox
         self.stButton.clicked.connect(self.settime)  # set time
+        self.viewComboBox.currentIndexChanged.connect(self.viewcb)
 
     def query(self):
         response = self.readTextEdit.toPlainText()
@@ -150,6 +151,17 @@ class Widget(QWidget, Ui_Widget):
         # ks34460a.inst.write("SYSTem:DATE " + year)
         ks34460a.inst.write("SYSTem:TIME " + hour)
 
+    def viewcb(self, index):
+        if index == 1:
+            text = self.readTextEdit.toPlainText()
+            hex_output = ascii_to_hex(text)
+            self.readTextEdit.setText(hex_output)
+        elif index == 0:
+            hex_string = self.readTextEdit.toPlainText()
+            print(hex_string)
+            ascii_string = hex_to_ascii(hex_string)
+            self.readTextEdit.setText(ascii_string)
+
     def exit(self):
         ks34460a.close()
         self.log()
@@ -166,3 +178,13 @@ def timestamp2():
 
 def ts():
     return timestamp() + ": "
+
+
+def ascii_to_hex(asci):
+    return " ".join(hex(ord(c))[2:] for c in asci)
+
+
+def hex_to_ascii(hexy):
+    hexy = hexy.replace(" a", " 0a")
+    hexz = "".join(hexy.split())
+    return bytes.fromhex(hexz).decode("ascii")

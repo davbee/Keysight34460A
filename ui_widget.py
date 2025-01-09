@@ -51,7 +51,6 @@ class Ui_Widget(object):
         self.viewComboBox = QComboBox(Widget)
         self.viewComboBox.addItem("")
         self.viewComboBox.addItem("")
-        self.viewComboBox.addItem("")
         self.viewComboBox.setObjectName(u"viewComboBox")
         self.viewComboBox.setGeometry(QRect(10, 170, 431, 22))
         self.writeButton = QPushButton(Widget)
@@ -151,8 +150,7 @@ class Ui_Widget(object):
         self.queryButton.setText(QCoreApplication.translate("Widget", u"Query", None))
         self.btrLabel.setText(QCoreApplication.translate("Widget", u"Bytes to Read", None))
         self.viewComboBox.setItemText(0, QCoreApplication.translate("Widget", u"View as ASCII Only", None))
-        self.viewComboBox.setItemText(1, QCoreApplication.translate("Widget", u"View mixed ASCII/hexadecimal", None))
-        self.viewComboBox.setItemText(2, QCoreApplication.translate("Widget", u"View as hexadecimal only", None))
+        self.viewComboBox.setItemText(1, QCoreApplication.translate("Widget", u"View as hexadecimal only", None))
 
         self.writeButton.setText(QCoreApplication.translate("Widget", u"Write", None))
         self.ccButton.setText(QCoreApplication.translate("Widget", u"Clear", None))

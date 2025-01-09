@@ -122,11 +122,6 @@
    </item>
    <item>
     <property name="text">
-     <string>View mixed ASCII/hexadecimal</string>
-    </property>
-   </item>
-   <item>
-    <property name="text">
      <string>View as hexadecimal only</string>
     </property>
    </item>
