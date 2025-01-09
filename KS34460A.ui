@@ -1,0 +1,491 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>Widget</class>
+ <widget class="QWidget" name="Widget">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>768</width>
+    <height>434</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Form</string>
+  </property>
+  <widget class="QLabel" name="commandLabel">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>70</y>
+     <width>131</width>
+     <height>16</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Select or Enter Command</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="readButton">
+   <property name="geometry">
+    <rect>
+     <x>170</x>
+     <y>140</y>
+     <width>75</width>
+     <height>23</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Read</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="cbButton">
+   <property name="geometry">
+    <rect>
+     <x>670</x>
+     <y>140</y>
+     <width>81</width>
+     <height>23</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Clear Buffer</string>
+   </property>
+  </widget>
+  <widget class="QTextEdit" name="readTextEdit">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>200</y>
+     <width>741</width>
+     <height>181</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QLabel" name="titleLabel">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>11</y>
+     <width>91</width>
+     <height>20</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>16</pointsize>
+    </font>
+   </property>
+   <property name="text">
+    <string>Basic I/O</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="queryButton">
+   <property name="geometry">
+    <rect>
+     <x>90</x>
+     <y>140</y>
+     <width>75</width>
+     <height>23</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Query</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="btrLabel">
+   <property name="geometry">
+    <rect>
+     <x>365</x>
+     <y>90</y>
+     <width>71</width>
+     <height>20</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Bytes to Read</string>
+   </property>
+  </widget>
+  <widget class="QComboBox" name="viewComboBox">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>170</y>
+     <width>431</width>
+     <height>22</height>
+    </rect>
+   </property>
+   <item>
+    <property name="text">
+     <string>View as ASCII Only</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>View mixed ASCII/hexadecimal</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>View as hexadecimal only</string>
+    </property>
+   </item>
+  </widget>
+  <widget class="QPushButton" name="writeButton">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>140</y>
+     <width>75</width>
+     <height>23</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Write</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="ccButton">
+   <property name="geometry">
+    <rect>
+     <x>360</x>
+     <y>140</y>
+     <width>81</width>
+     <height>23</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Clear</string>
+   </property>
+  </widget>
+  <widget class="QTextEdit" name="commandTextEdit">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>90</y>
+     <width>341</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="html">
+    <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+p, li { white-space: pre-wrap; }
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'MS Shell Dlg 2'; font-size:8.25pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;*IDN?&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="rsbButton">
+   <property name="geometry">
+    <rect>
+     <x>254</x>
+     <y>140</y>
+     <width>101</width>
+     <height>23</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Read Status Byte</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="cqueryButton">
+   <property name="geometry">
+    <rect>
+     <x>170</x>
+     <y>400</y>
+     <width>111</width>
+     <height>23</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Continuous Query</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="ctcButton">
+   <property name="geometry">
+    <rect>
+     <x>550</x>
+     <y>140</y>
+     <width>111</width>
+     <height>23</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Copy to Clipboard</string>
+   </property>
+  </widget>
+  <widget class="QSpinBox" name="btrSpinBox">
+   <property name="geometry">
+    <rect>
+     <x>360</x>
+     <y>110</y>
+     <width>81</width>
+     <height>22</height>
+    </rect>
+   </property>
+   <property name="maximum">
+    <number>102400</number>
+   </property>
+   <property name="value">
+    <number>10240</number>
+   </property>
+  </widget>
+  <widget class="QComboBox" name="commandComboBox">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>40</y>
+     <width>431</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <property name="editable">
+    <bool>true</bool>
+   </property>
+   <property name="maxVisibleItems">
+    <number>100</number>
+   </property>
+   <item>
+    <property name="text">
+     <string>*IDN?</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>*CLS</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>*RST</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>*TST?</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>*OPC</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>*OPC?</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>*WAI</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>*ESE</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>*ESE?</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>*ESR?</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>*SRE</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>*SRE?</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>*STB?</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>SYSTem:ERRor:NEXT?</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>SYSTem:LOCK:RELease</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>MEASure:CONTinuity?</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>MEASure:CURRent:AC?</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>MEASure:CURRent:DC?</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>MEASure:DIODe?</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>MEASure:FREQuency?</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>MEASure:FRESistance?</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>MEASure:PERiod?</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>MEASure:RESistance?</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>MEASure:TEMPerature?</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>MEASure:VOLTage:AC?</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>MEASure:VOLTage:DC?</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>SYSTem:DATE?</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>SYSTem:TIME?</string>
+    </property>
+   </item>
+  </widget>
+  <widget class="QPushButton" name="exitButton">
+   <property name="geometry">
+    <rect>
+     <x>680</x>
+     <y>400</y>
+     <width>75</width>
+     <height>23</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Exit</string>
+   </property>
+  </widget>
+  <widget class="QCheckBox" name="wsCheckBox">
+   <property name="geometry">
+    <rect>
+     <x>310</x>
+     <y>400</y>
+     <width>81</width>
+     <height>17</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>while query</string>
+   </property>
+  </widget>
+  <widget class="QSpinBox" name="flnSpinBox">
+   <property name="geometry">
+    <rect>
+     <x>95</x>
+     <y>400</y>
+     <width>61</width>
+     <height>22</height>
+    </rect>
+   </property>
+   <property name="maximum">
+    <number>102400</number>
+   </property>
+   <property name="value">
+    <number>5</number>
+   </property>
+   <property name="displayIntegerBase">
+    <number>10</number>
+   </property>
+  </widget>
+  <widget class="QLabel" name="btrLabel_2">
+   <property name="geometry">
+    <rect>
+     <x>100</x>
+     <y>380</y>
+     <width>71</width>
+     <height>20</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>For Loop #</string>
+   </property>
+  </widget>
+  <widget class="QDoubleSpinBox" name="stDoubleSpinBox">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>400</y>
+     <width>71</width>
+     <height>22</height>
+    </rect>
+   </property>
+   <property name="decimals">
+    <number>6</number>
+   </property>
+   <property name="value">
+    <double>0.500000000000000</double>
+   </property>
+  </widget>
+  <widget class="QLabel" name="btrLabel_3">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>380</y>
+     <width>71</width>
+     <height>20</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Sleep Time</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="stButton">
+   <property name="geometry">
+    <rect>
+     <x>450</x>
+     <y>140</y>
+     <width>91</width>
+     <height>23</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Set Date + Time</string>
+   </property>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
