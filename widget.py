@@ -147,8 +147,10 @@ class Widget(QWidget, Ui_Widget):
     def settime(self):
         now = datetime.datetime.now()
         # year = now.strftime("+%Y,") + now.strftime("+%m,") + now.strftime("+%d")
-        hour = now.strftime("%H,") + now.strftime("%M,") + now.strftime("%S")
+        hour = now.strftime("%H,") + now.strftime("%M,") + str(float(now.strftime("%S")) + 1)
         # ks34460a.inst.write("SYSTem:DATE " + year)
+        # print(now.strftime("%f"))
+        time.sleep(0.999 - float(now.strftime("%f"))/1000000)
         ks34460a.inst.write("SYSTem:TIME " + hour)
 
     def viewcb(self, index):
